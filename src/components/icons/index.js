@@ -1,0 +1,7 @@
+export { default as ChevronRight } from './ChevronRight'
+export { default as Defi } from './Defi'
+export { default as Exchanges } from './Exchanges'
+export { default as FilterIcon } from './FilterIcon'
+export { default as Games } from './Games'
+export { default as Marketplaes } from './Marketplaes'
+export { default as SearchIcon } from './SearchIcon'
