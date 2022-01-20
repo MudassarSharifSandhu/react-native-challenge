@@ -1,19 +1,19 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-const SvgChevronRight = (props) => (
+const SvgVector = (props) => (
   <Svg
     width="24"
     height="24"
-    viewBox="0 0 8 14"
+    viewBox="0 0 9 11"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className=""
     {...props}
   >
     <Path
-      d="M1.333 1.667 6.667 7l-5.334 5.333"
-      stroke="#6F6E73"
+      d="M8 9.625V5.25a3.5 3.5 0 1 0-7 0v4.375"
+      stroke="#fff"
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -21,4 +21,4 @@ const SvgChevronRight = (props) => (
   </Svg>
 );
 
-export default SvgChevronRight;
+export default SvgVector;

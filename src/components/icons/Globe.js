@@ -1,26 +1,26 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-const SvgFilterIcon = (props) => (
+const SvgGlobe = (props) => (
   <Svg
     width="24"
     height="24"
-    viewBox="0 0 25 24"
+    viewBox="0 0 23 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className=""
     {...props}
   >
     <Path
-      d="M12.981 7c4.97 0 9-.895 9-2s-4.03-2-9-2-9 .895-9 2 4.03 2 9 2Z"
-      stroke="#6F6E73"
+      d="M11.981 20.167a9.167 9.167 0 1 0 0-18.334 9.167 9.167 0 0 0 0 18.334Z"
+      stroke="#587BE0"
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <Path
-      d="M3.981 5c0 2.23 3.871 6.674 5.856 8.805a4.197 4.197 0 0 1 1.144 2.852V22l4-2v-3.343c0-1.061.421-2.075 1.144-2.852 1.986-2.131 5.856-6.574 5.856-8.805"
-      stroke="#6F6E73"
+      d="M8.314 11c0 5.063 1.642 9.167 3.667 9.167s3.667-4.104 3.667-9.167-1.642-9.167-3.667-9.167S8.314 5.937 8.314 11ZM2.814 11h18.334"
+      stroke="#587BE0"
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -28,4 +28,4 @@ const SvgFilterIcon = (props) => (
   </Svg>
 );
 
-export default SvgFilterIcon;
+export default SvgGlobe;

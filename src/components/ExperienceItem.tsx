@@ -21,7 +21,7 @@ const ExperienceItem = (props: IProps) => {
             w="74"
             borderRadius={10}
             source={props.image}
-            alt=""
+            alt={props.description}
           />
 
           <VStack justifyContent="space-between">
