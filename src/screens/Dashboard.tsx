@@ -16,7 +16,7 @@ import {
   Exchanges,
   Games,
   Defi,
-  Collectibles2,
+  Collectables,
   Utilities,
 } from "../components/icons";
 import MarketPlaes from "../components/icons/MarketPlaes";
@@ -112,7 +112,7 @@ const Dashboard = ({ navigation, route }) => {
             bg="#EBF5FF"
             icon={
               <Icon
-                as={<Collectibles2 height="35" width="35" color="#54AAF9" />}
+                as={<Collectables height="35" width="35" color="#54AAF9" />}
               />
             }
             title="Collectibles"

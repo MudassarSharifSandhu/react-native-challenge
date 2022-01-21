@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Circle, Path } from "react-native-svg";
 
-const SvgMarketplaes = (props) => (
+const SvgMarketPlaes = (props) => (
   <Svg
     width="24"
     height="24"
@@ -29,4 +29,4 @@ const SvgMarketplaes = (props) => (
   </Svg>
 );
 
-export default SvgMarketplaes;
+export default SvgMarketPlaes;

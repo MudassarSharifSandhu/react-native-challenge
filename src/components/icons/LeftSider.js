@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
 
-const SvgLeftsider = (props) => (
+const SvgLeftSider = (props) => (
   <Svg
     width="24"
     height="24"
@@ -18,4 +18,4 @@ const SvgLeftsider = (props) => (
   </Svg>
 );
 
-export default SvgLeftsider;
+export default SvgLeftSider;

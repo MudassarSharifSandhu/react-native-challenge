@@ -74,7 +74,7 @@ const SecureAccount2 = ({ navigation, route }) => {
         </Box>
         <Box mt="6" mb="30" py="10">
           <MyButtonWithIcons
-            title="Continue to Login d"
+            title="Continue to Login"
             icons={<SvgLeftsider height="14" width="14" />}
             backgroundColor={"blue.500"}
             onPress={onPress}

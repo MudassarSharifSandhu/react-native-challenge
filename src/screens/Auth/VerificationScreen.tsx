@@ -1,19 +1,19 @@
-import { Box, Input, Text } from "native-base";
-import React, { useState } from "react";
-import HeaderForSignUp from "../../components/HeaderForSignUp";
+import { Box, Factory, Text } from "native-base";
+import React, { useEffect, useState, useRef } from "react";
 import SvgLeftsider from "../../components/icons/LeftSider";
+import Input from "../../components/Input";
 import MyButtonWithIcons from "../../components/MyButtonWithIcons";
 
 const VerificationScreen = ({ navigation, route }) => {
-  const [pass, setPass] = useState({
-    ch1: "",
-    ch2: "",
-    ch3: "",
-    ch4: "",
-    ch5: "",
-    ch6: "",
-  });
-
+  const [pass, setPass] = useState([
+    { ch: "", n: 1 },
+    { ch: "", n: 2 },
+    { ch: "", n: 3 },
+    { ch: "", n: 4 },
+    { ch: "", n: 5 },
+    { ch: "", n: 6 },
+  ]);
+  console.log({ pass });
   const onPress = () => {
     navigation.navigate("CreateNEARaccount");
   };
@@ -49,48 +49,25 @@ const VerificationScreen = ({ navigation, route }) => {
           px={4}
           my={5}
         >
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch1: value })}
-          />
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch2: value })}
-          />
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch3: value })}
-          />
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch4: value })}
-          />
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch5: value })}
-          />
-          <Input
-            borderColor={"#885FFF"}
-            type={"text"}
-            keyboardType="numeric"
-            maxLength={1}
-            onChangeText={(value) => setPass({ ...pass, ch6: value })}
-          />
+          {pass &&
+            pass.length > 0 &&
+            pass
+              .sort(function (a, b) {
+                return b.n - a.n;
+              })
+              .map((item, index) => {
+                return (
+                  <Input
+                    onChangeText={(value) => {
+                      console.log({ ch: item.ch });
+                      let oldArray = [...pass];
+                      oldArray[index] = { ch: value, n: item.n };
+                      setPass(oldArray);
+                    }}
+                    pass={parseInt(item.ch)}
+                  />
+                );
+              })}
         </Box>
         <Box>
           <MyButtonWithIcons

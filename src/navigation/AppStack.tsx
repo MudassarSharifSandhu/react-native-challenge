@@ -11,8 +11,7 @@ import UnlockScreen from "../screens/Auth/UnlockScreen";
 import Dashboard from "../screens/Dashboard";
 import Docusign from "../screens/Docusign";
 
-
-import { headerLeft, headerRight } from "../components/header/Header";
+import { HeaderLeft, HeaderRight } from "../components/header/Header";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +19,7 @@ const SignUpStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           component={LandingScreen}
           name="HomeScreen"
           options={{
@@ -86,13 +85,13 @@ const SignUpStack = () => {
           options={{
             headerShown: false,
           }}
-        /> */}
+        />
         <Stack.Screen
           component={Dashboard}
           name="Dashboard"
           options={{
-            headerRight: headerRight,
-            headerLeft: headerLeft,
+            headerRight: () => <HeaderRight />,
+            headerLeft: () => <HeaderLeft />,
             title: "",
           }}
         />
@@ -101,8 +100,8 @@ const SignUpStack = () => {
           component={Docusign}
           name="Docusign"
           options={{
-            headerRight: headerRight,
-            headerLeft: headerLeft,
+            headerRight: () => <HeaderRight />,
+            headerLeft: () => <HeaderLeft />,
             title: "",
           }}
         />

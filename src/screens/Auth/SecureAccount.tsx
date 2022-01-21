@@ -1,4 +1,4 @@
-import { Box, Input, Text } from "native-base";
+import { Box, Input, ScrollView, Text } from "native-base";
 import React, { useState } from "react";
 import SvgLeftsider from "../../components/icons/LeftSider";
 import MyButtonWithIcons from "../../components/MyButtonWithIcons";
@@ -10,7 +10,8 @@ const SecureAccount = ({ navigation, route }) => {
     navigation.navigate("SecureAccount2");
   };
   return (
-    <Box>
+    <ScrollView>
+      <Box>
       <Box p="4">
         <Text color="#808080" fontSize={"14px"}>
           Keep your apps safe from other with access to your computer.
@@ -66,6 +67,7 @@ const SecureAccount = ({ navigation, route }) => {
         </Text>
       </Box>
     </Box>
+    </ScrollView>
   );
 };
 

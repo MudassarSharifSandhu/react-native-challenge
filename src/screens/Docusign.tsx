@@ -7,6 +7,7 @@ import SvgLinkTo from "../components/icons/LinkTo";
 import SvgPersons from "../components/icons/Persons";
 import SvgTopArrow from "../components/icons/TopArrow";
 import MediaForActivity from "../components/MediaForActivity";
+import { activity2 } from "../dummy-data/activitydata";
 
 const Docusign = () => {
   const [active, setActive] = useState("details");
@@ -153,9 +154,16 @@ const Docusign = () => {
             </Text>
           </Box>
           <Box mx={2}>
-            <MediaForActivity />
-            <MediaForActivity />
-            <MediaForActivity />
+            {activity2.map((item) => {
+              return (
+                <MediaForActivity
+                  onPress={() => {}}
+                  title={item.title}
+                  dec={item.dec}
+                  selected={false}
+                />
+              );
+            })}
           </Box>
         </>
       )}

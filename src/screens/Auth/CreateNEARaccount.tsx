@@ -77,7 +77,7 @@ const CreateNEARaccount = ({ navigation, route }) => {
             icons={<SvgLeftsider height="14" width="14" />}
             backgroundColor={"#414047"}
             onPress={() => {}}
-            disabled={true}
+            disabled={false}
           />
         </Box>
       </Box>
