@@ -4,53 +4,23 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LandingScreen from "../screens/Auth/LandingScreen";
 import VerificationScreen from "../screens/Auth/VerificationScreen";
 import CreateNEARaccount from "../screens/Auth/CreateNEARaccount";
-import { Box, CheckIcon, Icon, Select } from "native-base";
+import { Box, Icon, Modal, Text } from "native-base";
 import SecureAccount from "../screens/Auth/SecureAccount";
 import SecureAccount2 from "../screens/Auth/SecureAccount2";
 import UnlockScreen from "../screens/Auth/UnlockScreen";
 import Dashboard from "../screens/Dashboard";
 import Docusign from "../screens/Docusign";
 
-import { Notification, Settings } from "../components/icons";
+
+import { headerLeft, headerRight } from "../components/header/Header";
 
 const Stack = createNativeStackNavigator();
 
 const SignUpStack = () => {
-  const [services, setServices] = useState("");
-  const headerCom = () => (
-    <Box display="flex" flexDirection={"row"} alignItems={"center"}>
-      <Select
-        borderRadius={20}
-        selectedValue={services}
-        minWidth="200"
-        accessibilityLabel="Choose Service"
-        placeholder="Choose Service"
-        _selectedItem={{
-          bg: "teal.600",
-          endIcon: <CheckIcon size="5" />,
-        }}
-        mt={1}
-        onValueChange={(value) => setServices(value)}
-      >
-        <Select.Item label="UX Research" value="ux" />
-        <Select.Item label="Web Development" value="web" />
-        <Select.Item label="Cross Platform Development" value="cross" />
-        <Select.Item label="UI Designing" value="ui" />
-        <Select.Item label="Backend Development" value="backend" />
-      </Select>
-
-      <Box>
-        <Icon as={<Notification height="20" width="20" />} ml={3} mr="2" />
-      </Box>
-      <Box>
-        <Icon as={<Settings height="20" width="20" />} ml={3} mr="2" />
-      </Box>
-    </Box>
-  );
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           component={LandingScreen}
           name="HomeScreen"
           options={{
@@ -116,12 +86,14 @@ const SignUpStack = () => {
           options={{
             headerShown: false,
           }}
-        />
+        /> */}
         <Stack.Screen
           component={Dashboard}
           name="Dashboard"
           options={{
-            headerRight: headerCom,
+            headerRight: headerRight,
+            headerLeft: headerLeft,
+            title: "",
           }}
         />
 
@@ -129,7 +101,9 @@ const SignUpStack = () => {
           component={Docusign}
           name="Docusign"
           options={{
-            headerRight: headerCom,
+            headerRight: headerRight,
+            headerLeft: headerLeft,
+            title: "",
           }}
         />
       </Stack.Navigator>
