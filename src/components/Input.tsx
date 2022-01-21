@@ -10,7 +10,7 @@ const InputCom = ({ onChangeText, pass }: props) => {
       borderWidth="1"
       borderRadius="md"
       p="1"
-      textAlign={'center'}
+      textAlign={"center"}
       borderColor="#885FFF"
       maxLength={1}
       keyboardType={"numeric"}
