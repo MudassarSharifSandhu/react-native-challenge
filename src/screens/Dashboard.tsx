@@ -42,7 +42,6 @@ const Dashboard = ({ navigation, route }) => {
           }
         />
         <FilterItemModal />
-       
       </HStack>
 
       <ScrollView mt="4">

@@ -86,8 +86,8 @@ const SignUpStack = () => {
           options={{
             headerShown: false,
           }}
-        /> */}
-        <Stack.Screen
+        /> 
+         <Stack.Screen
           component={CreateNFT}
           name="CreateNFT"
           options={{
@@ -105,6 +105,7 @@ const SignUpStack = () => {
             title: "",
           }}
         />
+        */}
 
         <Stack.Screen
           component={Docusign}

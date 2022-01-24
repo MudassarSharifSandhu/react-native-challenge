@@ -7,6 +7,7 @@ import SvgLinkTo from "../components/icons/LinkTo";
 import SvgPersons from "../components/icons/Persons";
 import SvgTopArrow from "../components/icons/TopArrow";
 import MediaForActivity from "../components/MediaForActivity";
+import SharingLinkModal from "../components/SharingLinkModal";
 import { activity2 } from "../dummy-data/activitydata";
 
 const Docusign = () => {
@@ -31,20 +32,10 @@ const Docusign = () => {
           <Image
             source={require("../assets/images/docu-sign.png")}
             borderRadius={"10"}
+            alt="../assets/images/docu-sign.png"
           />
-          <Box
-            mt="10"
-            mr="3"
-            display={"flex"}
-            flexDirection={"row"}
-            justifyContent={"space-between"}
-            alignItems={"center"}
-          >
-            <Icon as={<SvgLinkTo height="15" width="15" />} ml={3} mr="2" />
-            <Text textAlign={"right"} color="#587BE0" fontSize={"16px"}>
-              Share
-            </Text>
-          </Box>
+
+          <SharingLinkModal />
         </Box>
       </Box>
       <Box mt="10" ml="3">
@@ -154,9 +145,10 @@ const Docusign = () => {
             </Text>
           </Box>
           <Box mx={2}>
-            {activity2.map((item) => {
+            {activity2.map((item, index) => {
               return (
                 <MediaForActivity
+                  key={item.title}
                   onPress={() => {}}
                   title={item.title}
                   dec={item.dec}
