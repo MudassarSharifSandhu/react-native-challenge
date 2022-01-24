@@ -22,3 +22,13 @@ export const activity2 = [
     dec: "3 days ago",
   },
 ];
+export const activity3 = [
+  {
+    title: "Digital Ninja",
+    dec: "by johndoe.near",
+  },
+  {
+    title: "Panda",
+    dec: "by whitegoose497",
+  },
+];

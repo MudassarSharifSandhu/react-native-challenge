@@ -12,6 +12,7 @@ import Dashboard from "../screens/Dashboard";
 import Docusign from "../screens/Docusign";
 
 import { HeaderLeft, HeaderRight } from "../components/header/Header";
+import CreateNFT from "../screens/CreateNFT";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,7 @@ const SignUpStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           component={LandingScreen}
           name="HomeScreen"
           options={{
@@ -99,6 +100,15 @@ const SignUpStack = () => {
         <Stack.Screen
           component={Docusign}
           name="Docusign"
+          options={{
+            headerRight: () => <HeaderRight />,
+            headerLeft: () => <HeaderLeft />,
+            title: "",
+          }}
+        /> */}
+        <Stack.Screen
+          component={CreateNFT}
+          name="CreateNFT"
           options={{
             headerRight: () => <HeaderRight />,
             headerLeft: () => <HeaderLeft />,
