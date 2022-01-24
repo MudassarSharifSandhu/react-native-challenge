@@ -1,8 +1,8 @@
 import { Input } from "native-base";
 import React from "react";
 interface props {
-  pass: Number;
-  onChangeText: (value) => void;
+  pass: string;
+  onChangeText: (id) => void;
 }
 const InputCom = ({ onChangeText, pass }: props) => {
   return (
@@ -15,8 +15,7 @@ const InputCom = ({ onChangeText, pass }: props) => {
       maxLength={1}
       keyboardType={"numeric"}
       onChangeText={(value) => onChangeText(value)}
-      value={pass}
-      returnKeyType={"next"}
+      value={pass.toString()}
     />
   );
 };

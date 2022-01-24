@@ -64,7 +64,7 @@ const VerificationScreen = ({ navigation, route }) => {
                       oldArray[index] = { ch: value, n: item.n };
                       setPass(oldArray);
                     }}
-                    pass={parseInt(item.ch)}
+                    pass={item.ch}
                   />
                 );
               })}

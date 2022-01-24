@@ -8,7 +8,7 @@ const ContactThumnail = () => {
     <Box
       mx="1"
       my="5"
-      backgroundColor="#F5F5F5"
+      backgroundColor="#F7E9FF"
       shadow={"4"}
       py="4"
       borderRadius={"10"}

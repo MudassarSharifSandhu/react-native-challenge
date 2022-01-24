@@ -2,7 +2,7 @@ import { Box, Icon, ScrollView, Text } from "native-base";
 import React, { useState } from "react";
 import ContactThumnail from "../components/ContactThumnail";
 import ExperienceItem2 from "../components/ExperienceItem2";
-import { Flower } from "../components/icons";
+import { Flower, MarketPlaes } from "../components/icons";
 import SvgLeftSider from "../components/icons/LeftSider";
 
 import MyButtonWithIcons from "../components/MyButtonWithIcons";
@@ -20,7 +20,9 @@ const CreateNFT = ({ navigation, route }) => {
     height: 10,
     // width: 20,
   };
-  const onPress = () => {};
+  const onPress = () => {
+    navigation.navigate("Dashboard");
+  };
   return (
     <ScrollView backgroundColor={"#FFFFFF"}>
       <Box
@@ -55,7 +57,7 @@ const CreateNFT = ({ navigation, route }) => {
           justifyContent={"space-between"}
           width="100%"
           height={"30%"}
-          backgroundColor={"#FFFFFF"}
+          backgroundColor={"#F7E9FF"}
           shadow={"1"}
         >
           <Box
@@ -66,10 +68,10 @@ const CreateNFT = ({ navigation, route }) => {
             alignItems={"center"}
           >
             <Box p="5">
-              <Text fontSize={"22px"} fontWeight={"600"}>
+              <Text fontSize={"21px"} fontWeight={"600"} mx={4}>
                 Start Creating your NFT Today
               </Text>
-              <Box mr="1" mt="4">
+              <Box mr="1" mt="5">
                 <MyButtonWithIcons
                   title="Create NFT"
                   icons={<SvgLeftSider height="14" width="14" />}

@@ -22,10 +22,12 @@ import {
 import MarketPlaes from "../components/icons/MarketPlaes";
 import ExperienceItem from "../components/ExperienceItem";
 import CategoryItem from "../components/CategoryItem";
+import FilterItemModal from "../components/FilterItemModal";
 
 const Dashboard = ({ navigation, route }) => {
+  const showFilterModal = () => {};
   return (
-    <VStack safeArea mt="2" mb="20" mx='3.5'>
+    <VStack safeArea mt="2" mb="20" mx="3.5">
       <HStack alignItems="center">
         <Input
           h={12}
@@ -39,12 +41,8 @@ const Dashboard = ({ navigation, route }) => {
             <Icon as={<SearchIcon height="25" width="25" />} ml={3} />
           }
         />
-
-        <Button
-          w="15%"
-          variant="ghost"
-          leftIcon={<Icon as={<FilterIcon height="30" width="30" />} />}
-        ></Button>
+        <FilterItemModal />
+       
       </HStack>
 
       <ScrollView mt="4">

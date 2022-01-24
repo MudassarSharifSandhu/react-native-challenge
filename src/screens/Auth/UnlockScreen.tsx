@@ -7,13 +7,12 @@ import MyButtonWithIcons from "../../components/MyButtonWithIcons";
 const UnlockScreen = ({ navigation, route }) => {
   const [pass, setPass] = useState("");
   const onPress = () => {
-    navigation.navigate("Dashboard");
+    navigation.navigate("CreateNFT");
   };
   return (
     <ScrollView>
       <KeyboardAvoidingView behavior="position">
-        <Box  height={"200px"} backgroundColor="#BB85FF" mt="20">
-          
+        <Box height={"200px"} backgroundColor="#BB85FF" mt="20">
           <Text
             textAlign={"center"}
             color="#FCFCFC"

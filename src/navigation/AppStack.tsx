@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LandingScreen from "../screens/Auth/LandingScreen";
@@ -86,6 +86,15 @@ const SignUpStack = () => {
           options={{
             headerShown: false,
           }}
+        /> */}
+        <Stack.Screen
+          component={CreateNFT}
+          name="CreateNFT"
+          options={{
+            headerRight: () => <HeaderRight />,
+            headerLeft: () => <HeaderLeft />,
+            title: "",
+          }}
         />
         <Stack.Screen
           component={Dashboard}
@@ -100,15 +109,6 @@ const SignUpStack = () => {
         <Stack.Screen
           component={Docusign}
           name="Docusign"
-          options={{
-            headerRight: () => <HeaderRight />,
-            headerLeft: () => <HeaderLeft />,
-            title: "",
-          }}
-        /> */}
-        <Stack.Screen
-          component={CreateNFT}
-          name="CreateNFT"
           options={{
             headerRight: () => <HeaderRight />,
             headerLeft: () => <HeaderLeft />,
